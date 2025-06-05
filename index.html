@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Priya Kumari | Product Marketing Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4e54c8;
+      --secondary: #8f94fb;
+      --light: #f7f7ff;
+      --text: #1f1f1f;
+      --accent: #ffafbd;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      color: var(--text);
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    .wrapper {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+
+    .page {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+      scroll-snap-align: start;
+    }
+
+    .page {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .page.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .profile-img {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 0 0 5px white, 0 10px 20px rgba(0,0,0,0.2);
+        margin-bottom: 20px;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        border: 4px solid transparent;
+        background: linear-gradient(135deg, var(--accent), var(--secondary));
+        background-clip: padding-box;
+    }
+
+    .profile-img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px var(--accent);
+        border-color: white;
+    }
+
+
+
+    .wrapper {
+      height: 100vh;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+    }
+
+    .page h1, .page h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .page p {
+      max-width: 700px;
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 0 5px white, 0 10px 20px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+
+    .card-grid {
+      display: grid;
+      gap: 20px;
+      width: 100%;
+      max-width: 1000px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3, .card h4 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #444;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .page:first-child {
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+        text-align: left;
+    }
+    .page:first-child .profile-img {
+        margin-bottom: 0;
+    }
+    .page:first-child p {
+        max-width: 400px;
+    }    
+}
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <section class="page" style="background: linear-gradient(to right, var(--primary), var(--secondary)); color: white;">
+    <img src="piru.jpg" alt="Priya Kumari" class="profile-img">
+    <h1>Priya Kumari</h1>
+    <p>Product Marketing Head · Researcher · Startup Growth Strategist</p>
+  </section>
+
+  <section class="page">
+    <h2>About Me</h2>
+    <p>I’m Priya Kumari, a dynamic product marketing leader with startup spirit and global research experience. At Vybe Cabs, I craft go-to-market plans, drive user growth, and align brand strategy with business execution. From HR frameworks to Japan-based research — I’ve worn multiple hats and built with bold energy.</p>
+  </section>
+
+  <section class="page">
+    <h2>Experience</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Head of Product Marketing — Vybe Cabs</h3>
+        <p><strong>Apr 2025 – Present | Bengaluru</strong></p>
+        <p>Leading the company’s growth through strategic product positioning, user acquisition, and high-performance marketing campaigns.</p>
+      </div>
+      <div class="card">
+        <h3>HR Manager — Vybe Cabs</h3>
+        <p><strong>Apr 2024 – Present</strong></p>
+        <p>Shaped internal culture and talent systems to support a growing product team from the ground up.</p>
+      </div>
+      <div class="card">
+        <h3>Business Researcher — X-Border Agent GK</h3>
+        <p><strong>Feb 2025 – Mar 2025 | Tokyo</strong></p>
+        <p>Collaborated on competitive and industry research across international markets, supporting market entry and partnership insights.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <h2>Skills</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h4>Product Marketing</h4>
+        <p>Brand messaging · Launch strategies · GTM execution · Customer lifecycle</p>
+      </div>
+      <div class="card">
+        <h4>Market Research</h4>
+        <p>Competitive scans · Persona development · Industry trends</p>
+      </div>
+      <div class="card">
+        <h4>HR & Leadership</h4>
+        <p>Culture building · Hiring strategy · Internal communication</p>
+      </div>
+      <div class="card">
+        <h4>Startup Execution</h4>
+        <p>Rapid iteration · Multitasking · Global exposure · Growth mindset</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:priya@vybecabs.com">priya@vybecabs.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/priya-kumari-b7016427a" target="_blank">linkedin.com/in/priya-kumari</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Priya Kumari — Crafted with passion and purpose.
+  </footer>
+</div>
+<script>
+  const pages = document.querySelectorAll('.page');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  }, { threshold: 0.5 });
+
+  pages.forEach(page => observer.observe(page));
+</script>
+
+</body>
+</html>
